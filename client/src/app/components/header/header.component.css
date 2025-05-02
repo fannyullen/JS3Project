@@ -1,0 +1,91 @@
+input {
+    border: 1px solid rgb(252, 142, 39);
+    border-radius: 5px;
+    /* padding: 5px; */
+    width: 250px;
+    transition: box-shadow 0.2s ease;
+}
+.input {
+    position: fixed;
+    right: 5px;
+    top: 110px;
+}
+.container {
+    display: flex;
+    background-color: rgb(251, 232, 188);
+    color: rgb(252, 142, 39);
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+.tape {
+    text-align: center;
+    background-color: rgb(250, 150, 57);
+    color: white;
+}
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.nav {
+    display: flex;
+    gap: 1.5em;
+    color: black;
+}
+.title-container {
+    margin: 2em;
+}
+button {
+    cursor: pointer;
+}
+.icons {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.2em;
+    margin: 2em;
+}
+.nav-link:hover {
+    text-decoration: 1px underline;
+}
+.hamburger {
+    font-size: 2rem;
+    margin: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hamburger:hover {
+    transform: scale(1.05);
+}
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.animate {
+    animation: fadeSlide 0.3s ease-out;
+  }
+  
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@media screen and (min-width: 680px) {
+    .hamburger {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 680px) {
+    .nav {
+        display: none;
+    }
+}

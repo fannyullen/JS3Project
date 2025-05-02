@@ -1,0 +1,40 @@
+<h1 *ngIf="products.length">Sökresultat för: "{{ searchTerm }}"</h1>
+
+<section class="filter">
+    <select class="dropdown" [(ngModel)]="selectedCategory" (change)="onCategoryChange($event)">
+        <option value="">Alla kategorier</option>
+        <option value="Glas">Glas</option>
+        <option value="Ljus">Ljus</option>
+        <option value="Vas">Vas</option>
+    </select>
+
+    <select class="dropdown-colors" [(ngModel)]="selectedColor" (change)="onColorChange($event)">
+        <option value="">Alla färger</option>
+        <option value="Rosa">Rosa</option>
+        <option value="Mintgrön">Mintgrön</option>
+        <option value="Blå">Blå</option>
+        <option value="Orange">Orange</option>
+        <option value="Transparent">Transparent</option>
+        <option value="Multi">Multi</option>
+    </select>
+</section>
+
+
+<section class="result-container">
+    <article *ngFor="let product of products">
+        <a [routerLink]="['/products', product.urlSlug]">
+            
+            <img src={{product.image}} alt="">
+            
+            <div class="info">
+                <div class="product-name">{{ product.productName }}</div>
+                <div class="product-price">{{ product.productPrice}}SEK</div>
+            </div>
+        </a>
+        <button (click)="addToCart(product)" class="button">Lägg i varukorg</button>
+    </article>
+</section>
+
+
+<p *ngIf="products.length === 0">Inga produkter matchar din sökning.</p>
+ 

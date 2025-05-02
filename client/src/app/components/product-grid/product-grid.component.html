@@ -1,0 +1,22 @@
+<h2 class="product-title">Våra Produkter</h2>
+<section class="product-grid">
+    <!-- Direktivet *ngFor -->
+    <article *ngFor="let product of products" class="product-card">
+        <!-- Att använda vanliga länkar kommer generera en omladdning av hela sidan och det vill vi undvika när vi navigerar internt inuti en applikation, så här vill vi istället använda något som kallas routerLink. För att använda routerLink så behöver vi importera modulen RouterModule. Och på den vägen skapar vi länkar som inte orsakar en omladdning av sidan. -->
+        <a [routerLink]="['/products', product.urlSlug]">
+
+            <span class="nyhet" *ngIf="isNew(product)">Nyhet</span>
+            
+            <img src={{product.image}} alt="">
+            
+            <div class="info">
+                <div class="product-name">{{product.productName}}</div>
+                <div class="product-price">{{product.productPrice}}SEK</div>
+            </div>
+        </a>
+        <button (click)="addToCart(product)">Lägg i varukorg</button>
+    </article>
+    <!-- <div *ngIf="addedToCartMessage" class="cart-confirmation">
+        ✅ Produkten har lagts till i varukorgen!
+    </div> -->
+</section>

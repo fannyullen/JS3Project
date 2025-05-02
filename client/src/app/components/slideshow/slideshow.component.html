@@ -1,0 +1,21 @@
+<!-- similar-products.component.html -->
+<div class="slideshow-container" *ngIf="products.length > 0">
+    <button class="pil" (click)="previous()" [disabled]="currentIndex === 0">‹</button>
+
+    <div class="visningsyta">
+      <div
+      class="slider"
+      [style.tranform]="'translateX(-' + currentIndex * (kortBredd + gap) + 'px)'"
+      [style.transition]="'transform 0.5s ease'">
+      
+        <div class="produktkort" *ngFor="let product of visibleProducts">
+          <img [src]="product.image" alt="{{ product.image }}">
+          <h3>{{ product.productName }}</h3>
+          <p>{{ product.productPrice }} kr</p>
+        </div>
+      </div>
+    </div>
+  
+    <button class="pil" (click)="next()" [disabled]="currentIndex + totalVisible >= products.length">›</button>
+  </div>
+  

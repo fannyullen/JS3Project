@@ -1,0 +1,40 @@
+h1 {
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 1em;
+}
+h2 {
+    font-size: x-large;
+    text-align: center;
+}
+input {
+    border: 1px solid black;
+    margin-bottom: 1em;
+    width: 100%;
+    padding: 8px;
+}
+label {
+    display: block;
+}
+.form-group {
+    margin: 2em;
+}
+
+button {
+    background-color: rgb(250, 150, 57);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(247, 136, 31, 0.81);
+    transform: scale(1.02);
+}
+
+.buy {
+    text-align: center;
+}

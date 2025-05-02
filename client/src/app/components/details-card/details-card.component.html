@@ -1,0 +1,9 @@
+<article class="details-card">
+    <img src={{product.image}} alt="">
+    <div class="details">
+        <div class="product-name">{{ product?.productName }}</div>
+        <div>{{ product?.description }}</div>
+        <div class="product-price">{{ product?.productPrice }} SEK</div>
+        <button (click)="addToCart(product)" class="button">Lägg till i varukorg</button>
+    </div>
+</article>

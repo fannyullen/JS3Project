@@ -1,0 +1,25 @@
+.accordion-header {
+    background-color: rgb(251, 232, 188);
+    padding: 12px;
+    cursor: pointer;
+    border: 1px solid rgb(250, 150, 57);
+    font-weight: bold;
+    margin-top: 1em;
+}
+/* Innehållet är dolt som standard*/
+.accordion-content {
+    padding: 12px;
+    border: 1px solid rgb(250, 150, 57);
+    border-top: none;
+    display: none;
+}
+/* Om innehållet har klassen "active", visa det */
+.accordion-content.active {
+    display: block;
+}
+
+.accordion {
+    margin: 2em;
+    margin-top: 3em;
+}
+  

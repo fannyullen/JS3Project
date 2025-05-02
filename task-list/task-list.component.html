@@ -1,0 +1,12 @@
+<h1>Att göra</h1>
+<!-- visas om tasks är större än noll -->
+    <ul *ngIf="tasks.length > 0" >
+      <!-- *ngfor = Angular direktiv som används för att iterera över tasks. Det finns olika direktiv i angular, t.ex. *ngIf. Direktiven används för att skapa dynamiska sidor.  -->
+      <li *ngFor="let task of tasks" [class.completed]="task.done" >
+        {{ task.name }}
+      </li>
+    </ul>
+    <!-- Visas om tasks är 0 -->
+    <div *ngIf="tasks.length === 0">
+        Inga fler uppgifter!
+    </div>

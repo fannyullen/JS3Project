@@ -1,0 +1,8 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.details {
+    text-align: center;
+    font-size: x-large;
+}

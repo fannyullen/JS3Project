@@ -1,0 +1,36 @@
+/* similar-products.component.css */
+.slideshow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4em;
+    height: 400px;
+  }
+
+  .visningsyta {
+    width: calc(220px * 3 + 16px * 2); /* 3 kort + 2 mellanrum */
+    overflow: hidden;
+  }
+  
+  .produktkort {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+  }
+  
+  .pil {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .slider {
+    display: flex;
+    gap: 16px;
+    will-change: transform;
+  }
+  

@@ -1,0 +1,37 @@
+<header class="header">
+    <div class="tape">
+        <p>Fri frakt!</p>
+    </div>
+    <div class="container">
+        <div class="hamburger">
+            <i class="bi bi-list"></i>
+        </div>
+        <div class="title-container">
+            <a [routerLink]="['/']"><h1 class="title">Vix Studio</h1></a>
+        </div>
+
+        <nav class="nav">
+            <a href="" class="nav-link"><div>Nyheter</div></a>
+            <a href="" class="nav-link"><div>Produkter</div></a>
+            <a href="" class="nav-link"><div>Kontakt</div></a>
+            <a href="" class="nav-link"><div>Om oss</div></a>
+        </nav>
+        
+        <div class="icons">
+            <button (click)="toggleSearch()"><i class="bi bi-search"></i></button>
+            <a href=""><i class="bi bi-suit-heart"></i></a>
+            <a [routerLink]="['/cart']"><i class="bi bi-bag"></i></a>
+        </div>
+    </div>
+    <!-- Sökrutan visas bara om showSearch = true -->
+    <div class="input">
+        <input
+        *ngIf="showSearch"
+        type="text"
+        class="animate"
+        [(ngModel)]="searchTerm"
+        (keydown.enter)="applySearch()"
+        placeholder="Sök produkter..."
+        >
+    </div>
+</header>

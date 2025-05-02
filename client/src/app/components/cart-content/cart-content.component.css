@@ -1,0 +1,82 @@
+.container {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2em;
+}
+h1 {
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.quantity {
+    border: 1px solid black;
+    width: 40px;
+    height: 35px;
+    text-align: center;
+}
+section {
+    margin: 1em;
+}
+.right {
+    font-size: x-large;
+    display: flex;
+    gap: 1em;
+}
+.left {
+    font-size: x-large;
+    margin-bottom: 1em;
+    margin-top: 1em ;
+}
+.button {
+    background-color: rgb(250, 150, 57);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: rgba(247, 136, 31, 0.81);
+    transform: scale(1.02);
+}
+.q-btn:hover {
+    background-color: rgba(247, 136, 31, 0.81);
+    transform: scale(1.02);
+}
+.btn {
+    text-align: center;
+}
+.img {
+    margin: 1em;
+}
+.trash {
+    cursor: pointer;
+}
+.empty {
+    margin: 2.5em;
+    font-size: x-large;
+}
+.quantity-controls {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+.q-btn {
+    background-color: rgb(250, 150, 57);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.empty-2 {
+    margin-left: 2em;
+    cursor: pointer;
+}
+.total {
+    margin-left: 2em;
+}

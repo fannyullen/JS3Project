@@ -1,0 +1,37 @@
+<div class="form-container">
+    <h2>Ny produkt</h2>
+    <!-- Lägger till ett direktiv här [formGroup] för att associera formulärgruppen till formuläret. Där vi använder en så kallad property binding för att koppla formulärgruppen till formuläret -->
+     <!-- Genom formControlName så kopplar vi varje fält till motsvarande kontroller i formulärgruppen -->
+    <!-- ngSubmit - funktionen onSubmit anropas när submit-händelsen inträffar -->
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="productName">Namn</label>
+            <input type="text" id="productName" formControlName="productName">
+        </div>
+        <div class="form-group">
+            <label for="productPrice">Pris</label>
+            <input type="text" id="productPrice" formControlName="productPrice">
+        </div>
+        <div class="form-group">
+            <label for="description">Beskrivning</label>
+            <input type="text" id="description" formControlName="description">
+        </div>
+        <div class="form-group">
+            <label for="category">Kategori</label>
+            <input type="text" id="category" formControlName="category">
+        </div>
+        <div class="form-group">
+            <label for="color">Färg</label>
+            <input type="text" id="color" formControlName="color">
+        </div>
+        <div class="form-group">
+            <label for="image">Bild</label>
+            <input type="text" id="image" formControlName="image">
+        </div>
+        <div class="form-group">
+            <label for="publishDate">Publiseringsdatum</label>
+            <input type="date" id="date" formControlName="publishDate">
+        </div>
+        <button type="submit">Skapa</button>
+    </form>
+</div>

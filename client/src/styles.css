@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+body {
+    background-color: rgb(251, 232, 188);
+}
+
+/* * {
+    font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  } */
+
+  /* * {
+    font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  } */
+
+  * {
+    font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }

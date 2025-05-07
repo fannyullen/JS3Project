@@ -13,9 +13,6 @@ import { NotificationService } from '../../services/notification/notification.se
   styleUrl: './product-grid.component.css'
 })
 export class ProductGridComponent {
-  // Decorator, för att skicka in data i en barnkomponent
-
-  /* products: Product[] = []; */
 
   constructor(private cartService: CartService, private productService: ProductService, private notificationService: NotificationService) {}
 
@@ -28,6 +25,5 @@ export class ProductGridComponent {
     return this.productService.isNew(product);
   }
 
-  // tar emot data från sin förälder
   @Input() products!: any[];
 }

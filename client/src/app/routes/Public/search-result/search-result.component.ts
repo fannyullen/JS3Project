@@ -20,14 +20,12 @@ export class SearchResultComponent {
   selectedCategory = '';
   selectedColor = '';
 
-  // Dependency injection
   private cartService = inject(CartService);
   private notificationService = inject(NotificationService);
   private http = inject(HttpClient);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
 
-  // Our movies is an array of our movie-type-object that we have under types
   products: Product[] = [];
 
 
@@ -80,46 +78,6 @@ loadMovies() {
     this.products = products;
   });
 }
-
-  /* // En variabel som håller i värdet i query-strängen
-  searchQuery: string = '';
-
-  // En array av de sammanlagda filtrerade produkterna som matchar värdet i query-strängen
-  filteredProducts: Product[] = [];
-
-  // Med hjälp av ActivatedRoute kan vi få tag på/plocka ut URL-parametrar / värden som ligger i query-strängen i URL:en
-  // jag använder constructor här istället för inject (dependency injection) (för jag vill förstå hur man använder constructor också). Så istället för att injicera ProductService eller ActivatedRoutes, så begär vi dessa genom constructorn
-  // En Constructor är en speciell metod som kommer anropas automatiskt i samband med att en instans eller ett objekt av den här klassen skapas upp. Och då kommer vi att ta emot ett objekt av typ activated route, som vi sen kan använda för att plocka ut värdet från URL:en.
-  constructor(
-    private route: ActivatedRoute,
-    private productService: ProductService,
-    private http: HttpClient,
-    private cartService: CartService,
-    private notificationService: NotificationService
-  ) {}
-
-  // Filtrera på frontend
-
-    ngOnInit() {
-      // Hämta söksträngen från URL-parametrar (t.ex. ?q=mugg)
-      this.route.queryParams.subscribe(params => {
-        // query eller tom sträng
-        this.searchQuery = params['q'] || '';
-
-        // Hämta alla produkter från backend
-        this.productService.getProducts().subscribe(products => {
-
-          const query = this.searchQuery.toLowerCase();
-
-          // Filtrera produkter baserat på namn, kategori eller färg
-          this.filteredProducts = products.filter(product =>
-            product.productName.toLowerCase().includes(query) ||
-            product.category.toLowerCase().includes(query) ||
-            product.color.toLowerCase().includes(query)
-          );
-        });
-      });
-    } */
 
     addToCart(product: Product) {
       this.cartService.addToCart(product);

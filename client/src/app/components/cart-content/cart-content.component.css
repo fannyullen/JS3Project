@@ -2,12 +2,14 @@
     border: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 2em;
 }
 h1 {
     font-size: x-large;
     text-align: center;
     margin-bottom: 1em;
+}
+.section {
+    margin: 2em;
 }
 .quantity {
     border: 1px solid black;
@@ -22,11 +24,15 @@ section {
     font-size: x-large;
     display: flex;
     gap: 1em;
+    justify-content: center;
 }
 .left {
-    font-size: x-large;
+    font-size: xx-large;
     margin-bottom: 1em;
-    margin-top: 1em ;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .button {
     background-color: rgb(250, 150, 57);
@@ -76,7 +82,21 @@ section {
 .empty-2 {
     margin-left: 2em;
     cursor: pointer;
+    font-size: larger;
 }
 .total {
     margin-left: 2em;
+    font-size: x-large;
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        width: 800px;
+    }
+    .section {
+        display: flex;
+        justify-content: center;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
 }

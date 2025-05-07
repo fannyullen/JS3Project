@@ -1,12 +1,7 @@
-<!-- Här lägger vi gemensamma element såsom header, som ska vara densamma på alla olika sidor-->
-
 <main class="main">
     <div *ngIf="message" class="global-notification">
         {{ message }}
     </div>
-
-    <!-- router-outlet fungerar som en platshållare för huvudinnehållet av sidan. T.ex. om vi är på startsidan så kommer startsidan att visas inuti <main>-taggen här. -->
-    <!-- importera RouterModule för att använda router outlet -->
      
     <router-outlet/>
 </main>

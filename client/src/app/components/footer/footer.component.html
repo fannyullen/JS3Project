@@ -1,14 +1,14 @@
 <div class="accordion">
-  <!-- Loopa igenom varje item i listan med direktivet *ngFor -->
     <div *ngFor="let item of accordionItems; let i = index">
-      
-      <!-- Klickbar rubrik som öppnar/stänger sektionen -->
       <div class="accordion-header" (click)="toggleAccordion(i)">
         {{ item.title }}
       </div>
-      <!-- Innehåll som visas om denna sektion är aktiv -->
       <div class="accordion-content" [class.active]="i === activeIndex">
-        {{ item.content }}
+        <ul>
+          <li *ngFor="let row of item.content">
+            {{ row }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>

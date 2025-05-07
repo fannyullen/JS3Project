@@ -3,7 +3,6 @@ import { Component, Input, inject } from '@angular/core';
 import { ProductService } from '../../../../services/product/product.service';
 import { RouterModule } from '@angular/router';
 import { Product } from '../../../../types/Product';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-admin-table',
@@ -13,14 +12,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdminTableComponent {
 
-  // Dependency injection
   private productService = inject(ProductService);
 
-  // types/Product används här istället för any[]
   products: Product[] = [];
 
-  // Skicka anrop till backend med ngOnInit
-  // Hämtar produkter från backend
   ngOnInit() {
     this.productService.getAllProducts().subscribe((products) => {
       this.products = products;

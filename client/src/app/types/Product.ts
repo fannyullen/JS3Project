@@ -9,4 +9,5 @@ export interface Product {
     image: URL;
     publishDate: string;
     urlSlug: string;
+    SKU: string;
 }

@@ -12,18 +12,16 @@ import { CartItem } from '../../services/cart/cart.service';
   styleUrl: './cart-content.component.css'
 })
 export class CartContentComponent {
-  // Hämta produkter i varukorgen
+
   cartItems: CartItem[] = [];
   totalPrice: number = 0;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit() {
-    /* this.cartItems = this.cartService.getItems(); */
     this.loadCart();
   }
 
-  // Hämta varukorgens innehåll och totalsumma
   loadCart() {
     this.cartItems = this.cartService.getItems();
     this.totalPrice = this.cartService.getTotal();
@@ -31,14 +29,12 @@ export class CartContentComponent {
 
   removeItem(productId: number) {
     this.cartService.removeFromCart(productId);
-    this.loadCart(); // uppdatera visningen
-    /* this.cartItems = this.cartService.getItems(); */ // uppdatera listan
+    this.loadCart();
   }
 
   clearCart() {
     this.cartService.clearCart();
     this.loadCart();
-    /* this.cartItems = []; */
   }
 
   increase(productId: number) {
@@ -49,7 +45,6 @@ export class CartContentComponent {
   decrease(productId: number) {
     this.cartService.decreaseQuantity(productId);
     this.loadCart();
-  }  
-  // Tar emot data från föräldern CartComponent
+  }
   @Input() product!: any;
 }

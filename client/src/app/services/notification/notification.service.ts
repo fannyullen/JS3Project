@@ -12,7 +12,6 @@ export class NotificationService {
   showMessage(message: string) {
     this.messageSubject.next(message);
 
-    // Rensa efter 2 sekunder
     setTimeout(() => {
       this.messageSubject.next(null);
     }, 2000);

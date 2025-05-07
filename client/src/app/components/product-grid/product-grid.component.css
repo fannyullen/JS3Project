@@ -17,10 +17,18 @@
 .info {
     margin: 0.5em;
 }
+i {
+    color: white;
+    position: absolute;
+    bottom: 145px;
+    right: 10px;
+    font-size: larger;
+}
 button {
     background-color: rgb(250, 150, 57);
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
+    width: 200px;
     margin: 0.5em;
     color: white;
     cursor: pointer;
@@ -36,6 +44,11 @@ button:hover {
 }
 article {
     position: relative;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 .nyhet {
     position: absolute;
@@ -54,3 +67,11 @@ article {
     border: 1px solid #c3e6cb;
     border-radius: 6px;
 }  
+
+@media screen and (min-width: 900px) {
+    .product-grid {
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

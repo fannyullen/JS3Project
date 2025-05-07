@@ -1,4 +1,4 @@
-<h1 *ngIf="products.length">Sökresultat för: "{{ searchTerm }}"</h1>
+<h1 *ngIf="products.length">Hittade {{products.length}} produkter för: "{{ searchTerm }}"</h1>
 
 <section class="filter">
     <select class="dropdown" [(ngModel)]="selectedCategory" (change)="onCategoryChange($event)">

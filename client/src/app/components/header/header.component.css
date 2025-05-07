@@ -7,7 +7,7 @@ input {
 }
 .input {
     position: fixed;
-    right: 5px;
+    right: 20px;
     top: 110px;
 }
 .container {
@@ -33,7 +33,7 @@ input {
     color: black;
 }
 .title-container {
-    margin: 2em;
+    margin: 3em;
 }
 button {
     cursor: pointer;
